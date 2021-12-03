@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body
+{
+  background-image: url("bookfinal11.png");
+  background-color: #cccccc;
+  height: 500px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+.rg-h2
+{
+  text-align: center;
+  position: absolute;
+  top: 15%;
+  left: 57%;
+  transform: translate(-100%,-100%);
+  color: black;
+  font-family:"Monotype Corsiva";
+}
+.rg-h1 
+{
+  text-align: center;
+  position: absolute;
+  top: 35%;
+  left: 70%;
+  transform: translate(-100%,-100%);
+  color: black;
+  font-family:"Monotype Corsiva";
+}
+.rg-in
+{
+font-family:"Consolas";
+font-size:25px;
+color:black;
+}
+input[type=text] 
+{
+    width:50%;
+    padding: 10px 10px;
+    margin: 8px 0px;
+    box-sizing: border-box;
+    border: none;
+    background-color: #ccc;
+    color: black;
+    border-radius:50px;
+    font-size:18px;
+    font-weight:Bold;
+    font-family:Consolas;
+}
+input[type=textarea] 
+{
+    width:45%;
+    padding: 10px 10px;
+    margin: 8px 0px;
+    box-sizing: border-box;
+    border: none;
+    background-color: #ccc;
+    color: black;
+    border-radius:50px;
+    font-size:18px;
+    font-weight:Bold;
+    font-family:Consolas;
+    top:370px;
+    left:200px;
+}
+input[type=number] 
+{
+    width:45%;
+    padding: 10px 10px;
+    margin: 8px 0px;
+    box-sizing: border-box;
+    border: none;
+    background-color: #ccc;
+    color: black;
+    border-radius:50px;
+    font-size:18px;
+    font-weight:Bold;
+    font-family:Consolas;
+}
+input[type=date] 
+{
+    width:45%;
+    padding: 10px 10px;
+    margin: 8px 0px;
+    box-sizing: border-box;
+    border: none;
+    background-color: #ccc;
+    color: black;
+    border-radius:50px;
+    font-size:18px;
+    font-weight:Bold;
+    font-family:Consolas;
+}
+
+input[type=reset] 
+{
+    width: 500%;
+    padding: 10px 10px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: none;
+    background-color: tomato;
+    color: black;
+    border-radius:70px;
+    cursor:pointer;
+    position:relative;
+}
+input[type=submit] 
+{
+    width: 500%;
+    padding: 10px 10px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: none;
+    background-color: tomato;
+    color: black;
+    border-radius:70px;
+    cursor:pointer;
+    position:relative;
+}
+</style>
+<script>
+function validateForm()
+{
+	 var x = document.forms["myForm"]["no"].value;
+	 if(x.length<1||x.length>10)
+	 {
+		alert("Contact Number should be of 10 digits");
+		return false;
+	 }
+}
+</script>
+</head>
+
+<title>User Registration</title>
+<body>
+  <div class="rg-h2">
+	<h2 style="font-size:40px">Welcome,Guest</h2>
+  </div>
+<div class="rg-h1">
+	<h1 style="font-size:80px">REGISTRATION</h1>
+  </div>
+
+<form name="myForm" action="Bookpage.html"
+onsubmit="return validateForm()" method="post">
+
+<div style="position:absolute;left:490px; top:130px;">
+<legend style="font-size:60px;color:rgb(128,0,0);font-family:Monotype Corsiva;text-align:center;">Personal Details</legend><hr style="border:0.5px solid black"></div>
+
+<div class="rg-in"><div style="position:absolute; left:150px; top:250px;">
+  	<label for="name">First Name:</label>
+  	<input type="text" placeholder="Your Name" name="name" required></div>
+
+<div class="rg-in"><div style="position:absolute; left:700px; top:250px;">
+	<label for="name2">Last Name:</label>
+  	<input type="text" placeholder="Your Surname" name="name2" required></div>
+
+<div class="rg-in"><div style="position:absolute; left:150px; top:310px;">
+	<label for="no">Contact Number:</label>
+  	<input type="number" placeholder="Your Contact No" name="no" pattern="[0-9]{10}" required></div>
+
+<div class="rg-in"><div style="position:absolute; left:150px; top:370px;">
+	<label for="addr">Address:</label>
+  	<input type="textarea" placeholder="Your Address" name="addr" required></div>
+
+<div class="rg-in"><div style="position:absolute; left:550px; top:370px;">
+<label for="city">City:</label>
+	<select required style="width:200px; padding:10px 10px; margin:8px 0px; box-sizing:border-box; border:none; background-color:#ccc; color:black; border-radius:50px; 
+	font-size:18px; font-weight:Bold; font-family:Consolas;">
+		<option selected="selected" value="Your City"></option>
+
+    <option>Ahmedabad</option> 
+		<option>Bangalore</option>
+    <option>Bopal</option>
+    <option>Chandigarh</option>
+    <option>Chennai</option>
+		<option>Delhi</option>
+    <option>Faridabad</option>
+    <option>Guwahati</option>
+    <option>Hyderabad</option>
+    <option>Indore</option>
+    <option>Jaipur</option>
+    <option>Kolkata</option>
+    <option>Lucknow</option>
+    <option>Mumbai</option>
+    <option>Mysore</option>
+    <option>Nashik</option>
+    <option>Patna</option>
+		<option>Pune</option>
+		<option>Rajpur</option>
+    <option>Ranchi</option>
+		<option>Surat</option>
+    <option>Tirupati</option>
+		<option>Udaipur</option>
+		<option>Varanasi</option>
+		
+	</select>
+</div> 
+
+<div class="rg-in"><div style="position:absolute; left:900px; top:370px;">
+	<label for="state">State:</label>
+  	<input type="text" placeholder="Your State" name="state" required></div>
+
+<div class="rg-in"><div style="position:absolute; left:150px; top:430px;">
+	<label for="dob">Date of Birth:</label>
+  	<input type="date" placeholder="Your DOB" name="dob" required></div>
+
+<div class="rg-in"><div style="position:absolute; left:600px; top:430px;">
+<label for="gender">Gender:</label>
+	<select required style="width:200px; padding:10px 10px; margin:8px 0px; box-sizing:border-box; border:none; background-color:#ccc; color:black; border-radius:50px; 
+	font-size:18px; font-weight:Bold; font-family:Consolas;">
+		<option selected="selected" value="Gender"></option>
+ 
+		<option>Male</option>
+		<option>Female</option>
+	</select>
+</div> 
+
+
+<div class="rg-in"><div style="position:absolute; left:100px; top:500px;">
+	<input type="reset" value="RESET" style="font-family:Arial;font-size:20px;"></div>
+
+<div class="rg-in"><div style="position:absolute; left:700px; top:500px;">
+	<input type="submit" value="SUBMIT" style="font-family:Arial;font-size:20px;"></div>
+
+
+</form>
+</body>
+</html>
